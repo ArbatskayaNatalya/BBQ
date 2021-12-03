@@ -27,4 +27,8 @@ module ApplicationHelper
     end
     flash_messages.join("\n").html_safe
   end
+
+  def user_avatar(user)
+    asset_path('user.png')
+  end
 end
