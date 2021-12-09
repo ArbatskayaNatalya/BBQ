@@ -1,19 +1,17 @@
 <%= form_for @user, html: {multipart: true} do |f| %>
 
-  <%= render partial: 'partials/form_errors', locals: {model: @user} %>
-
   <div class="form-group mb-3">
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control', placeholder: 'Имя' %>
+    <%= f.text_field :name, class: 'form-control', placeholder: t('placeholder.name') %>
   </div>
 
   <div class="form-group mb-3">
     <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control', placeholder: 'Email' %>
+    <%= f.text_field :email, class: 'form-control', placeholder: t('placeholder.email') %>
   </div>
 
   <div class="actions mb-3">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+    <%= f.submit t('buttons.save'), class: 'btn btn-primary' %>
+    или <%= link_to t('buttons.return'), :back %>
   </div>
 <% end %>

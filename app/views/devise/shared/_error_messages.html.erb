@@ -2,7 +2,7 @@
 <div class="container alert alert-danger">
   <div class="row">
     <div class="col-11">
-      <h4> You have <%= resource.errors.count %> errors </h4>
+      <h4> <%= t('errors.messages.not_saved', count: resource.errors.count) %></h4>
     </div>
     <div class="col-1">
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

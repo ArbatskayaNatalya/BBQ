@@ -1,4 +1,4 @@
-<h2 class="text-center">Log in</h2>
+<h2 class="text-center"><%= t('titles.log_in') %></h2>
 
 <div class="container">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -20,7 +20,7 @@
       <% end %>
 
       <div class="actions">
-        <%= f.submit "Log in" , class: "btn btn-primary mt-3" %>
+        <%= f.submit t('buttons.log_in') , class: "btn btn-primary mt-3" %>
       </div>
     <% end %>
 

@@ -1,33 +1,78 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      user: 'User'
+      event: 'Event'
+
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Name'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        current_password: 'Current password'
+
+      event:
+        title: 'Title'
+        address: 'Address'
+        datetime: 'Date and time'
+        description: 'Description'
+
+  title: 'BBQ'
+  company: 'Good programmer'
+
+  controllers:
+    events:
+      created: 'You create new event'
+      updated: 'You edit your event'
+      destroyed: 'You delite your event :('
+    users:
+      updated: 'You update your profile'
+
+  buttons:
+    profile: 'Profile'
+    sign_out: 'Sign out'
+    sign_up: 'Sign up'
+    sign_in: 'Sign in'
+    new_event: 'Create event'
+    edit_profile: 'Edit profile'
+    save: 'Save'
+    return: 'Return'
+    edit: 'Edit'
+    password: 'Change password'
+    log_in: 'Log in'
+    update: 'Update'
+    chancel_account: 'Cancel my account'
+    back: 'Back'
+
+  titles:
+    events: 'Events'
+    edit_event: 'Edit event'
+    create: 'Create'
+    edit_profile: 'Edit profile'
+    log_in: 'Log in'
+    forgot_password: 'Forgot your password'
+    change_password: 'Change my password'
+    edit_user: 'Edit User'
+    chancel_account: 'Cancel my account'
+
+  text:
+    show_events: 'The user has not organized any events yet'
+    forgot_password: 'Forgot your password'
+    reset_password: 'Send me reset password instructions'
+    change_password: 'we need your current password to confirm your changes'
+
+  placeholder:
+    email: 'Email'
+    name: 'Name'
+    password: '6 characters minimum'
+    password_confirmation: 'Password confirmation'
+    password_change: "leave blank if you don't want to change it"
+    current_password: 'Current password'
+
+  errors:
+    messages:
+      not_saved:
+        one: "1 error prohibited this from being saved:"
+        other: "%{count} errors prohibited this from being saved:"
+

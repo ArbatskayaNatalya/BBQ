@@ -9,13 +9,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <title>Bbq</title>
+    <title><%= t('title') %></title>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
-        <%= link_to "BBQ!", root_path, class: 'navbar-brand' %>
+        <%= link_to t('title'), root_path, class: 'navbar-brand' %>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,11 +23,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <% if user_signed_in? %>
-              <li class="nav-link"><%= link_to 'Профиль', current_user %></li>
-              <li class="nav-link"><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></li>
+              <li class="nav-link"><%= link_to t('buttons.profile'), current_user %></li>
+              <li class="nav-link"><%= link_to t('buttons.sign_out'), destroy_user_session_path, :method => :delete %></li>
             <% else %>
-              <li class="nav-link"><%= link_to 'Войти', new_user_session_path %></li>
-              <li class="nav-link"><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+              <li class="nav-link"><%= link_to t('buttons.sign_in'), new_user_session_path %></li>
+              <li class="nav-link"><%= link_to t('buttons.sign_up'), new_user_registration_path %></li>
             <% end %>
           </ul>
         </div>
@@ -47,8 +47,8 @@
         </div>
       </div>
 
-      <footer>
-        <p>&copy; Company 2016</p>
+      <footer class="mt-5">
+        <p>&copy; <%= t('company') %> 2021</p>
       </footer>
 
     </div>
