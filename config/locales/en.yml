@@ -24,7 +24,7 @@ en:
   controllers:
     events:
       created: 'You create new event'
-      updated: 'You edit your event'
+      updated: 'You update your event'
       destroyed: 'You delite your event :('
     users:
       updated: 'You update your profile'
@@ -44,6 +44,7 @@ en:
     update: 'Update'
     chancel_account: 'Cancel my account'
     back: 'Back'
+    delete: 'Delete'
 
   titles:
     events: 'Events'
@@ -75,4 +76,10 @@ en:
       not_saved:
         one: "1 error prohibited this from being saved:"
         other: "%{count} errors prohibited this from being saved:"
+
+  notice:
+    destroy: 'Запись успешно удалена'
+
+  confirm:
+    agree: 'Are you sure'
 
