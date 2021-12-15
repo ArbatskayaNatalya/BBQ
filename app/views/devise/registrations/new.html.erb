@@ -1,72 +1,37 @@
-<h2 class="text-center mt-3"><%= t('buttons.sign_up') %></h2>
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <h2 class="mt-3"><%= t('buttons.sign_up') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render partial: 'devise/shared/error_messages', resource: resource %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
-  <div class="container">
-    <div class="row mb-4">
-      <div class="m-0 p-0">
-        <%= f.label :email, class: "col-form-label p-3 fw-bold" %>
-      </div>
-      <div class="input-group">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: t('placeholder.email') %>
-        <span class="input-group-text">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-          </svg>
-        </span>
-      </div>
-    </div>
+        <div class="form-group mb-3">
+          <%= f.label :email, class: "col-form-label mb-1 fw-bold" %>
+          <%= f.email_field :email,  autocomplete: "email", class: "form-control", placeholder: t('placeholder.email') %>
+        </div>
 
-    <div class="row align-items-center mb-4">
-      <div class="input-group m-0 p-0">
-        <%= f.label :name, class: "col-form-label p-3 fw-bold" %>
-      </div>
-      <div class="input-group">
-        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: t('placeholder.name') %>
-        <span class="input-group-text">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-          </svg>
-        </span>
-      </div>
-    </div>
+        <div class="form-group mb-3">
+          <%= f.label :name, class: "col-form-label mb-1 fw-bold" %>
+          <%= f.text_field :name, class: "form-control", placeholder: t('placeholder.name') %>
+        </div>
 
+        <div class="form-group mb-3">
+          <%= f.label :password, class: "col-form-label mb-1 fw-bold" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: t('placeholder.password') %>
+        </div>
 
-    <div class="row align-items-center mb-4">
-      <div class="input-group m-0 p-0">
-        <%= f.label :password, class: "col-form-label p-3 fw-bold" %>
-      </div>
+        <div class="form-group mb-3">
+          <%= f.label :password_confirmation, class: "col-form-label mb-1 fw-bold" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: t('placeholder.password_confirmation') %>
+        </div>
 
-      <div class="input-group">
-        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: t('placeholder.password') %>
-        <span class="input-group-text">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-          </svg>
-        </span>
-      </div>
-    </div>
+        <div class="actions">
+          <%= f.submit t('buttons.sign_up'), class: "btn btn-primary mt-3" %>
+        </div>
+      <% end %>
 
-    <div class="row align-items-center mb-4">
-      <div class="col-auto input-group m-0 p-0">
-        <%= f.label :password_confirmation, class: "col-form-label p-3 fw-bold" %>
-      </div>
-      <div class="col-6 input-group">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: t('placeholder.password_confirmation') %>
-        <span class="input-group-text">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-          </svg>
-        </span>
-      </div>
+      <%= render "devise/shared/links" %>
     </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit t('buttons.sign_up'), class: "btn btn-primary m-4" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
 </div>

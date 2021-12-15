@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
-      redirect_to @event, notice: t('controllers.events.created')
+      redirect_to @event, notice: t('.created')
     else
       render :new
     end
@@ -32,7 +32,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to @event, notice: t('controllers.events.updated')
+      redirect_to @event, notice: t('.updated')
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to events_path, notice: t('controllers.events.destroyed')
+    redirect_to events_path, notice: t('.destroyed')
   end
 
   private

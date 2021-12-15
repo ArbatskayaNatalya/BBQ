@@ -3,6 +3,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      comment: 'Комментарий'
+      subscription: 'Подписка'
 
     attributes:
       user:
@@ -11,7 +13,7 @@ ru:
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
-        remember_me:
+        remember_me: 'Запомнить меня'
 
       event:
         title: 'Название'
@@ -19,21 +21,49 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'
 
-  controllers:
-    events:
+      comment:
+        body: 'Текст'
+        user_name: 'Имя'
+
+      subscription:
+        user_name: 'Имя'
+        user_email: 'Email'
+
+  events:
+    create:
       created: 'Вы создали новое мероприятие'
+    update:
       updated: 'Вы обновили мероприятие'
-      destroyed: 'Вы удалили мероприятие :('
-    users:
+    destroy:
+      destroyed: 'Вы удалили мероприятие'
+    show:
+      invite: 'Приглашает:'
+      members: 'Пойдут:'
+      join: 'Присоединиться:'
+
+  users:
+    update:
       updated: 'Вы обновили свой профиль'
-    comments:
+
+  comments:
+    destroy:
       destroyed: 'Комментарий удален'
+      error: 'Ошибка с комментарием'
+    create:
       created: 'Ваш комментарий добавлен'
       error: 'Ошибка с комментарием'
-    subscriptions:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+
+  subscriptions:
+    create:
       created: 'Вы подписаны на это событие'
+      error: 'Подписка/отписка не сработала'
+    destroy:
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
   title: 'Шашлыки'
   company: 'Хороший программист'
@@ -55,6 +85,8 @@ ru:
     chancel_account: 'Удалить мой аккаунт'
     back: 'Назад'
     delete: 'Удалить'
+    subscribe: 'Подписаться'
+    push: 'Отправить'
 
   titles:
     events: 'События'
@@ -72,6 +104,7 @@ ru:
     forgot_password: 'Забыли пароль'
     reset_password: 'Отправить инструкцию по смене пароля'
     change_password: 'введите свой пароль для подтверждения изменений'
+    or: 'или'
 
   placeholder:
     email: 'Email'
@@ -89,13 +122,9 @@ ru:
         many: "Cохранение не удалось из-за %{count} ошибок"
         other: "Cохранение не удалось из-за %{count} ошибки"
 
+  notice:
+    destroy: 'Запись успешно удалена'
+
   confirm:
-    agree: 'Вы уверены'
-
-  comments:
-    comment:
-      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
-
-  subscriptions:
-    subscription:
-      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+    agree: 'Вы уверены?'
+    agree_event: 'Вы уверены, что хотите удалить событие?'
