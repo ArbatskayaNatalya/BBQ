@@ -30,6 +30,13 @@ ru:
         user_email: 'Email'
         user: 'Пользователь'
 
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              already_exists: 'уже существует'
+
   events:
     create:
       created: 'Вы создали новое мероприятие'

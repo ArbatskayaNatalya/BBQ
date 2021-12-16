@@ -30,6 +30,13 @@ en:
         user_email: 'Email'
         user: 'User'
 
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              already_exists: 'already exists'
+
   title: 'BBQ'
   company: 'Good programmer'
 
