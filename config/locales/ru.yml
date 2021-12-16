@@ -28,6 +28,7 @@ ru:
       subscription:
         user_name: 'Имя'
         user_email: 'Email'
+        user: 'Пользователь'
 
   events:
     create:

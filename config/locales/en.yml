@@ -28,6 +28,7 @@ en:
       subscription:
         user_name: 'Name'
         user_email: 'Email'
+        user: 'User'
 
   title: 'BBQ'
   company: 'Good programmer'
