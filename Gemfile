@@ -12,6 +12,8 @@ gem 'webpacker', '~> 5.0'
 gem 'devise'
 gem 'rails-i18n'
 gem 'devise-i18n'
+gem 'carrierwave'
+gem 'rmagick'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 

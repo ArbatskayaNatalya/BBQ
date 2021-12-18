@@ -5,6 +5,7 @@ ru:
       event: 'Событие'
       comment: 'Комментарий'
       subscription: 'Подписка'
+      photo: 'Фотография'
 
     attributes:
       user:
@@ -14,6 +15,7 @@ ru:
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
         remember_me: 'Запомнить меня'
+        avatar: 'Аватар'
 
       event:
         title: 'Название'
@@ -29,6 +31,9 @@ ru:
         user_name: 'Имя'
         user_email: 'Email'
         user: 'Пользователь'
+
+      photo:
+        photo: 'Фотография'
 
     errors:
       models:
@@ -73,6 +78,14 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
+  photos:
+    create:
+      created: 'Фотография успешно добавлена'
+      error: 'Ошибка добавления фотографии'
+    destroy:
+      destroyed: 'Фотография удалена'
+      error: 'Ошибка удаления фотографии'
+
   title: 'Шашлыки'
   company: 'Хороший программист'
 
@@ -113,6 +126,7 @@ ru:
     reset_password: 'Отправить инструкцию по смене пароля'
     change_password: 'введите свой пароль для подтверждения изменений'
     or: 'или'
+    add: 'добавил'
 
   placeholder:
     email: 'Email'

@@ -5,6 +5,7 @@ en:
       event: 'Event'
       comment: 'Comment'
       subscription: 'Subscription'
+      photo: 'Photo'
 
     attributes:
       user:
@@ -14,6 +15,7 @@ en:
         password_confirmation: 'Password confirmation'
         current_password: 'Current password'
         remember_me: 'Remember me'
+        avatar: 'Avatar'
 
       event:
         title: 'Title'
@@ -29,6 +31,9 @@ en:
         user_name: 'Name'
         user_email: 'Email'
         user: 'User'
+
+      photo:
+        photo: 'Photo'
 
     errors:
       models:
@@ -76,6 +81,14 @@ en:
     subscription:
       destroy_confirm: 'Are you sure you want to delete your subscription?'
 
+  photos:
+    create:
+      created: 'You create new photo'
+      error: 'Photo error'
+    destroy:
+      destroyed: 'You delite photo'
+      error: 'Photo error'
+
   buttons:
     profile: 'Profile'
     sign_out: 'Sign out'
@@ -113,6 +126,7 @@ en:
     reset_password: 'Send me reset password instructions'
     change_password: 'we need your current password to confirm your changes'
     or: 'or'
+    add: 'add'
 
   placeholder:
     email: 'Email'
