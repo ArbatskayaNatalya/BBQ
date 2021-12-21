@@ -10,7 +10,7 @@ class PhotosController < ApplicationController
     if @new_photo.save
       redirect_to @event, notice: t('.created')
     else
-      render 'event/show', alert: t('.error')
+      render 'events/show', alert: t('.error')
     end
   end
 

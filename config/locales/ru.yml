@@ -86,6 +86,22 @@ ru:
       destroyed: 'Фотография удалена'
       error: 'Ошибка удаления фотографии'
 
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+
   title: 'Шашлыки'
   company: 'Хороший программист'
 
@@ -108,6 +124,7 @@ ru:
     delete: 'Удалить'
     subscribe: 'Подписаться'
     push: 'Отправить'
+    change_my_password: 'Изменить пароль'
 
   titles:
     events: 'События'
@@ -119,6 +136,7 @@ ru:
     change_password: 'Изменить пароль'
     edit_user: 'Изменить данные'
     chancel_account: 'Удалить аккаунт'
+    change_your_password: 'Изменить пароль'
 
   text:
     show_events: 'Пользователь пока не организовал ни одного события'

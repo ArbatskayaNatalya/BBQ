@@ -89,6 +89,22 @@ en:
       destroyed: 'You delite photo'
       error: 'Photo error'
 
+  event_mailer:
+    comment:
+      title: 'New comment'
+      author: 'Author'
+      event: 'Event'
+      datetime: 'datetime'
+      owner: 'Owner'
+    subscription:
+      title: 'New subscription'
+      name: 'Name'
+      email: 'Email'
+      author: 'Author'
+      event: 'Event'
+      datetime: 'datetime'
+      owner: 'Owner'
+
   buttons:
     profile: 'Profile'
     sign_out: 'Sign out'
@@ -108,6 +124,7 @@ en:
     delete: 'Delete'
     subscribe: 'Subscribe'
     push: 'Push'
+    change_my_password: 'Change password'
 
   titles:
     events: 'Events'
@@ -119,6 +136,7 @@ en:
     change_password: 'Change my password'
     edit_user: 'Edit User'
     chancel_account: 'Cancel my account'
+    change_your_password: 'Change password'
 
   text:
     show_events: 'The user has not organized any events yet'
@@ -149,4 +167,4 @@ en:
 
   confirm:
     agree: 'Are you sure'
-    agree_event: 'Are you sure yuo want destroy event?'
+    agree_event: 'Are you sure you want destroy event?'
