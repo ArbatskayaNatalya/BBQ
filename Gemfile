@@ -15,6 +15,8 @@ gem 'devise-i18n'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'mailjet'
+gem 'dotenv-rails'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 

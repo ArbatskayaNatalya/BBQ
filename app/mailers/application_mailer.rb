@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'friendsbbq.heroku.ru'
+  default from: ENV["MAILJET_FROM"]
   layout 'mailer'
 end
