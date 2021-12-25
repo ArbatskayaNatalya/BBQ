@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
       message = {alert: t('.error')}
     end
     redirect_to @event, message
-end
+  end
 
   private
 
@@ -40,11 +40,10 @@ end
   end
 
   def notify_subscribers(event, comment)
-  # Собираем всех подписчиков и автора события в массив мэйлов, исключаем повторяющиеся
-  all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
 
-  all_emails.each do |mail|
-    EventMailer.comment(event, comment, mail).deliver_now
+    all_emails.each do |mail|
+      EventMailer.comment(event, comment, mail).deliver_now
+    end
   end
-end
 end

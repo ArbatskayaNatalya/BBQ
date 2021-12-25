@@ -101,6 +101,14 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+    photo:
+      title: 'Новая фотография'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
 
   title: 'Шашлыки'
   company: 'Хороший программист'
@@ -145,6 +153,9 @@ ru:
     change_password: 'введите свой пароль для подтверждения изменений'
     or: 'или'
     add: 'добавил'
+    new_subscription: 'Новая подписка на'
+    new_comment: 'Новый комментарий к'
+    new_photo: 'Новое фото к'
 
   placeholder:
     email: 'Email'

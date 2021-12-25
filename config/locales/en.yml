@@ -104,6 +104,14 @@ en:
       event: 'Event'
       datetime: 'datetime'
       owner: 'Owner'
+    subscription:
+      title: 'New photo'
+      name: 'Name'
+      email: 'Email'
+      author: 'Author'
+      event: 'Event'
+      datetime: 'datetime'
+      owner: 'Owner'
 
   buttons:
     profile: 'Profile'
@@ -145,6 +153,9 @@ en:
     change_password: 'we need your current password to confirm your changes'
     or: 'or'
     add: 'add'
+    new_subscription: 'New subscription on'
+    new_comment: 'New comment at'
+    new_photo: 'New photo at'
 
   placeholder:
     email: 'Email'

@@ -5,9 +5,7 @@ class EventMailer < ApplicationMailer
     @name = subscription.user_name
     @event = event
 
-    # Берём у юзер его email
-    # Subject тоже можно переносить в локали
-    mail to: event.user.email, subject: "Новая подписка на #{event.title}"
+    mail to: event.user.email, subject: "t('text.new_subscription') #{event.title}"
   end
 
 
@@ -15,6 +13,13 @@ class EventMailer < ApplicationMailer
     @comment = comment
     @event = event
 
-    mail to: email, subject: "Новый комментарий @ #{event.title}"
+    mail to: email, subject: "t('text.new_comment') #{event.title}"
+  end
+
+  def photo(event, photo, email)
+    @event = event
+    @photo = photo
+
+    mail to: email, subject: "t('text.new_photo') #{event.title}"
   end
 end
