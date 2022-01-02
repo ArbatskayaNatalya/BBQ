@@ -94,7 +94,7 @@ en:
       title: 'New comment'
       author: 'Author'
       event: 'Event'
-      datetime: 'datetime'
+      datetime: 'Datetime'
       owner: 'Owner'
     subscription:
       title: 'New subscription'
@@ -102,7 +102,7 @@ en:
       email: 'Email'
       author: 'Author'
       event: 'Event'
-      datetime: 'datetime'
+      datetime: 'Datetime'
       owner: 'Owner'
     subscription:
       title: 'New photo'
@@ -110,7 +110,7 @@ en:
       email: 'Email'
       author: 'Author'
       event: 'Event'
-      datetime: 'datetime'
+      datetime: 'Datetime'
       owner: 'Owner'
 
   buttons:
