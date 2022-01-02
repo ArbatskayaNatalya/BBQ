@@ -96,6 +96,8 @@ en:
       event: 'Event'
       datetime: 'Datetime'
       owner: 'Owner'
+      subject: "New comment @ %{event}"
+
     subscription:
       title: 'New subscription'
       name: 'Name'
@@ -104,7 +106,9 @@ en:
       event: 'Event'
       datetime: 'Datetime'
       owner: 'Owner'
-    subscription:
+      subject: "New subscription @ %{event}"
+
+    photo:
       title: 'New photo'
       name: 'Name'
       email: 'Email'
@@ -112,6 +116,7 @@ en:
       event: 'Event'
       datetime: 'Datetime'
       owner: 'Owner'
+      subject: "New photo @ %{event}"
 
   buttons:
     profile: 'Profile'

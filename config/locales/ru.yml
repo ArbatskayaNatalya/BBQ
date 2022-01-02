@@ -93,6 +93,8 @@ ru:
       event: 'Событие'
       datetime: 'Дата'
       owner: 'Организатор'
+      subject: "Новый комментарий @ %{event}"
+
     subscription:
       title: 'Новая подписка'
       name: 'Имя'
@@ -101,6 +103,8 @@ ru:
       event: 'Событие'
       datetime: 'Дата'
       owner: 'Организатор'
+      subject: "Новая подписка на %{event}"
+
     photo:
       title: 'Новая фотография'
       name: 'Имя'
@@ -109,6 +113,7 @@ ru:
       event: 'Событие'
       datetime: 'Дата'
       owner: 'Организатор'
+      subject: "Новая фотография @ %{event}"
 
   title: 'Шашлыки'
   company: 'Хороший программист'
