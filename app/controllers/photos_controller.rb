@@ -2,7 +2,6 @@ class PhotosController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
   before_action :set_photo, only: [:destroy]
 
-
   def create
     @new_photo = @event.photos.build(photo_params)
     @new_photo.user = current_user
@@ -14,7 +13,6 @@ class PhotosController < ApplicationController
       render 'events/show', alert: t('.error')
     end
   end
-
 
   def destroy
     message = {notice: t('.destroyed')}
@@ -44,9 +42,8 @@ class PhotosController < ApplicationController
   def notify_about_foto(event, photo)
     all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [photo.user.email]).uniq
 
-
     all_emails.each do |mail|
-      EventMailer.photo(event, photo, mail).deliver_now
+      EventMailer.photo(photo, mail).deliver_now
     end
   end
 end

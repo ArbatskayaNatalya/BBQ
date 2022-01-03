@@ -44,7 +44,6 @@ class EventsController < ApplicationController
   end
 
   private
-
   def set_event
     @event = Event.find(params[:id])
   end
@@ -53,7 +52,6 @@ class EventsController < ApplicationController
     @event = current_user.events.find(params[:id])
   end
 
-  # редактируем параметры события
   def event_params
     params.require(:event).permit(:title, :address, :datetime, :description)
   end
