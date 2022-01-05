@@ -10,6 +10,7 @@ import "channels"
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import 'stylesheets/application'
+import '../scripts/map'
 
 Rails.start()
 ActiveStorage.start()
