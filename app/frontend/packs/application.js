@@ -9,7 +9,8 @@ import "channels"
 
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
-import 'stylesheets/application'
+import '../stylesheets/application.scss'
+const images = require.context('../images', true)
 import '../scripts/map'
 import '../scripts/lightbox'
 
