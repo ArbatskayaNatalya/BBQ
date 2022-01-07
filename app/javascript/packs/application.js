@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import 'stylesheets/application'
 import '../scripts/map'
+import '../scripts/lightbox'
 
 Rails.start()
 ActiveStorage.start()
