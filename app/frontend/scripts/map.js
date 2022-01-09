@@ -1,5 +1,4 @@
 ymaps.ready(init);
-var myMap;
 
 function init(){
   if (document.getElementById('map') === null) return
@@ -15,7 +14,7 @@ function init(){
 
   myGeocoder.then(
     function (res) {
-      coordinates = res.geoObjects.get(0).geometry.getCoordinates();
+      const coordinates = res.geoObjects.get(0).geometry.getCoordinates();
 
       myMap.geoObjects.add(
         new ymaps.Placemark(
