@@ -186,6 +186,7 @@ ru:
   confirm:
     agree: 'Вы уверены?'
     agree_event: 'Вы уверены, что хотите удалить событие?'
+    agree_photo: 'Вы уверены, что хотите удалить фотографию?'
 
   controllers:
     events:

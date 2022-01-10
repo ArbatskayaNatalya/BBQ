@@ -30,11 +30,23 @@
   </div>
 
   <div class="row">
-    <div class="col-md-8">
+    <div class="col">
       <div class="event-photos mt-2">
-        <div class="event-photos-gallery mt-2">
-          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-        </div>
+        <% if @event.photos.count > 0 %>
+          <div class="event-photos-gallery">
+            <div class="glide">
+              <div class="glide__arrows" data-glide-el="controls">
+                  <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                  <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+              <div class="glide__track mt-2" data-glide-el="track">
+                <ul class="glide__slides">
+                  <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
         <div class="event-photo-form mt-1">
           <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         </div>

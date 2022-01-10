@@ -186,6 +186,8 @@ en:
   confirm:
     agree: 'Are you sure'
     agree_event: 'Are you sure you want destroy event?'
+    agree_photo: 'Are you sure you want delete event?'
+
 
   controllers:
     events:
